@@ -39,18 +39,18 @@ public class PhysLayerClient {
 	            System.out.println();
 	            
 	            //NRZI Decoding
-	            int start = 1;
+	            int Signal = 1;
 	            for (int x = 0; x < binaryByte.length; x++){
-	            	if (start == binaryByte[x]){
+	            	if (Signal == binaryByte[x]){
 	            		fourFive[x] = 0;
-	            		start = 0;
+	            		Signal = 0;
 	            	}
 	            	else {
 	            		fourFive[x] = 1;
-	            		start = 1;
+	            		Signal = 1;
 	            	}
-	            	//System.out.print(fourFive[x]);
 	            }
+	            
 	            System.out.println();
             	int y = 0;
 	            //Grouping into 5ths.
